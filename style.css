@@ -1,148 +1,132 @@
 * {
-   box-sizing: border-box;
-   margin: 0;
-   padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-   font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
-   font-size: 35px;
-   font-weight: 200;
-   color: hsl(234, 12%, 34%);
-   text-align: center;
-   margin-top: 70px;
+  font-size: 35px;
+  font-weight: 200;
+  color: hsl(234, 12%, 34%);
+  text-align: center;
+  margin-top: 70px;
 }
 
 h2 {
-   font-size: 35px;
-   font-weight: 600;
-   color: hsl(234, 12%, 34%);
-   text-align: center;
-   padding-bottom: 15px;
+  font-size: 35px;
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+  text-align: center;
+  padding-bottom: 15px;
 }
 
 h3 {
-   color: hsl(234, 12%, 34%);
-   margin-bottom: 10px;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 10px;
 }
 
 p {
-   color: hsl(229, 6%, 66%);
-   font-size: 0.9rem;
+  color: hsl(229, 6%, 66%);
+  font-size: 0.9rem;
 }
 
 .intro {
-   text-align: center;
-   margin-left: 30px;
-   margin-right: 30px;
-}
-
-.box-1 {
-   border-top: 6px hsl(180, 62%, 55%) solid;
-   display: inline-block;
-   padding: 25px;
-   margin: 30px;
-   border-radius: 6px;
-   width: 370px;
-   height: 260px;
-   box-shadow: 1px 1px 10px 1px hsl(229, 6%, 66%);
-   grid-area: supervisor-left;
-   justify-self: right;
-   align-self: center;
-}
-
-.box-2 {
-   border-top: 6px hsl(0, 78%, 62%) solid;
-   display: inline-block;
-   padding: 25px;
-   margin: 30px;
-   border-radius: 6px;
-   width: 370px;
-   height: 260px;
-   box-shadow: 1px 1px 10px 1px hsl(229, 6%, 66%);
-   grid-area: teambuilder-middle;
-   justify-self: center;
-}
-
-.box-3 {
-   border-top: 6px hsl(34, 97%, 64%) solid;
-   display: inline-block;
-   padding: 25px;
-   margin: 30px;
-   border-radius: 6px;
-   width: 370px;
-   height: 260px;
-   box-shadow: 1px 1px 10px 1px hsl(229, 6%, 66%);
-   grid-area: karma-middle;
-   justify-self: center;
-}
-
-.box-4 {
-   border-top: 6px hsl(212, 86%, 64%) solid;
-   display: inline-block;
-   padding: 25px;
-   margin: 30px;
-   border-radius: 6px;
-   width: 370px;
-   height: 260px;
-   box-shadow: 1px 1px 10px 1px hsl(229, 6%, 66%);
-   grid-area: calculator-right;
-   justify-self: left;
-   align-self: center;
+  text-align: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  line-height: 1.7rem;
 }
 
 .boxes {
-   display: grid;
-   grid-template-columns: auto;
-   grid-template-rows: auto;
-   grid-template-areas: 
-      "supervisor-left teambuilder-middle calculator-right"
-      "supervisor-left . calculator-right"
-      "supervisor-left karma-middle calculator-right";
-   margin-left: auto;
-   margin-right: auto;
-   width: 1290px;
-   padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.box {
+  /* display: inline-block; */
+  padding: 25px;
+  margin: 20px;
+  border-radius: 6px;
+  max-width: 370px;
+  box-shadow: 10px 10px 20px 0px hsl(229, 6%, 66%);
+  justify-self: right;
+  align-self: center;
+}
+
+#cyan {
+  border-top: 6px hsl(180, 62%, 55%) solid;
+  order: 1;
+  transform: translateY(145px);
+}
+
+#red {
+  border-top: 6px hsl(0, 78%, 62%) solid;
+  order: 2;
+}
+
+#orange {
+  border-top: 6px hsl(34, 97%, 64%) solid;
+  order: 4;
+}
+
+#blue {
+  border-top: 6px hsl(212, 86%, 64%) solid;
+  order: 3;
+  transform: translateY(145px);
 }
 
 img.product-icon {
-   float: right;
-   padding-top: 50px;
-   padding-right: 10px;
+  float: right;
+  padding-top: 50px;
+  padding-right: 10px;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 30px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
-@media (max-width: 375px) {
-   .boxes {
-      display: flex;
-      flex-direction: column;
-      margin-left: 0;
-      margin-right: 0;
-      width: 0;
-   }
+@media (max-width: 768px) {
+  .boxes {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-   .box-1,
-   .box-4 {
-      align-self: unset;
-   }
-   
-   .box-1,
-   .box-2,
-   .box-3,
-   .box-4 {
-      width: 315px;
-      padding: 15px;
-   }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+}
 
-   h1 {
-      font-size: 24px;
-   }
-   h2 {
-      font-size: 24px;
-   }
+@media (max-width: 1024px) {
+  #blue {
+    transform: translateY(0px);
+  }
+
+  #cyan {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 1440px) {
+  .boxes {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
