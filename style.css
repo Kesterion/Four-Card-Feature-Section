@@ -39,6 +39,7 @@ p {
   margin-left: 30px;
   margin-right: 30px;
   line-height: 1.7rem;
+  margin-bottom: 40px;
 }
 
 .boxes {
@@ -56,29 +57,29 @@ p {
   margin: 20px;
   border-radius: 6px;
   max-width: 370px;
-  box-shadow: 10px 10px 20px 0px hsl(229, 6%, 66%);
+  box-shadow: 1px 15px 25px 0px hsl(229, 6%, 66%);
   justify-self: right;
   align-self: center;
 }
 
 #cyan {
-  border-top: 6px hsl(180, 62%, 55%) solid;
+  border-top: 4px hsl(180, 62%, 55%) solid;
   order: 1;
   transform: translateY(145px);
 }
 
 #red {
-  border-top: 6px hsl(0, 78%, 62%) solid;
+  border-top: 4px hsl(0, 78%, 62%) solid;
   order: 2;
 }
 
 #orange {
-  border-top: 6px hsl(34, 97%, 64%) solid;
+  border-top: 4px hsl(34, 97%, 64%) solid;
   order: 4;
 }
 
 #blue {
-  border-top: 6px hsl(212, 86%, 64%) solid;
+  border-top: 4px hsl(212, 86%, 64%) solid;
   order: 3;
   transform: translateY(145px);
 }
